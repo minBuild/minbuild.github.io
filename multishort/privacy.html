@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보 처리방침 | multishort</title>
+<meta name="description" content="multishort가 다루는 정보와 유튜브·메타·광고·결제에 관한 안내">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <div class="nav"><a href="/">minBuild</a> · <a href="index.html">multishort</a></div>
+
+  <h1>개인정보 처리방침</h1>
+  <p class="lead">시행일: 2026년 10월 18일</p>
+
+  <p>multishort(이하 "앱")는 휴대폰에 있는 숏폼 영상을 유튜브 쇼츠, 인스타그램 릴스, 페이스북 릴스에 한 번에 올리고, 틱톡 앱으로 넘겨 주는 앱입니다. 회원가입이 없고 운영자(minBuild)의 서버도 없습니다. 영상과 계정 정보는 이용자의 기기에서 각 플랫폼(Google, Meta)으로 바로 전송되며, 운영자는 이용자의 정보를 받거나 보관하지 않습니다.</p>
+
+  <h2>1. 앱이 다루는 정보</h2>
+  <div class="table">
+  <table>
+    <tr><th>정보</th><th>쓰는 곳</th><th>저장과 전송</th></tr>
+    <tr>
+      <td>이용자가 고른 영상</td>
+      <td>이용자가 연결한 곳에 올리기</td>
+      <td>업로드하는 동안 기기에서 읽어 Google(유튜브)과 Meta(인스타그램·페이스북)로 바로 보냅니다. 틱톡은 공유 화면에서 이용자가 고른 앱으로 넘깁니다. 운영자에게는 보내지 않습니다.</td>
+    </tr>
+    <tr>
+      <td>제목, 설명, 해시태그, 공개 범위</td>
+      <td>각 플랫폼 게시물의 제목과 설명</td>
+      <td>업로드할 때 해당 플랫폼으로만 보냅니다.</td>
+    </tr>
+    <tr>
+      <td>유튜브 연결 정보</td>
+      <td>내 채널에 영상 올리기, 화면에 채널 이름 표시</td>
+      <td>로그인 토큰은 Google 로그인 기능이 기기에 보관합니다. 채널 이름만 기기의 보안 저장소(iOS 키체인, 안드로이드 Keystore)에 저장합니다.</td>
+    </tr>
+    <tr>
+      <td>인스타그램·페이스북 연결 정보</td>
+      <td>내 페이스북 페이지와 연결된 인스타그램 계정에 릴스 올리기</td>
+      <td>Meta가 준 접근 토큰, 페이지 ID·이름, 인스타그램 계정 ID·사용자 이름을 기기의 보안 저장소에만 저장합니다.</td>
+    </tr>
+    <tr>
+      <td>구독 여부</td>
+      <td>광고 제거 구독 확인</td>
+      <td>결제는 Apple(App Store)과 Google(Google Play)이 처리하고, 구독 상태 확인은 RevenueCat이 처리합니다(4항).</td>
+    </tr>
+  </table>
+  </div>
+  <p class="note">앱은 사진 보관함에서 이용자가 직접 고른 영상만 읽습니다. 위치, 연락처, 카메라, 마이크는 쓰지 않습니다. 앱 안에 분석 도구는 없습니다.</p>
+
+  <h2>2. 유튜브 (YouTube API 서비스)</h2>
+  <p>앱은 유튜브에 영상을 올리기 위해 YouTube API 서비스를 사용합니다. 유튜브를 연결할 때 Google 계정으로 로그인하고 다음 두 가지 권한을 허락받습니다.</p>
+  <ul>
+    <li>YouTube 동영상 관리(youtube.upload): 이용자가 업로드를 누른 영상을 이용자의 채널에 올립니다.</li>
+    <li>YouTube 계정 보기(youtube.readonly): 어느 채널로 올라가는지 보여 주려고 내 채널의 이름을 읽습니다.</li>
+  </ul>
+  <p>앱은 이 권한으로 받은 정보를 업로드와 채널 이름 표시에만 쓰며, 운영자를 포함한 누구에게도 넘기거나 팔지 않고 광고에 쓰지 않습니다. multishort가 Google API에서 받은 정보를 쓰고 다른 앱으로 전송하는 방식은 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>의 제한적 사용(Limited Use) 요구 사항을 포함해 그 정책을 따릅니다.</p>
+  <p>유튜브 기능을 쓰면 <a href="https://www.youtube.com/t/terms">YouTube 서비스 약관</a>에 동의하는 것이 됩니다. Google이 정보를 처리하는 방식은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에서 확인할 수 있습니다.</p>
+  <p>앱의 연결 탭에서 "연결 해제"를 누르면 앱이 Google에 받은 권한을 거두고 기기에 저장한 채널 이름을 지웁니다. <a href="https://security.google.com/settings/security/permissions">Google 계정의 보안 설정 페이지</a>에서도 언제든 multishort의 접근 권한을 거둘 수 있습니다.</p>
+
+  <h2>3. 인스타그램·페이스북 (Meta)</h2>
+  <p>인스타그램과 페이스북 연결은 Meta의 Facebook 로그인으로 합니다. 앱은 다음 권한을 요청하며, 이용자가 고른 페이스북 페이지와 거기 연결된 인스타그램 프로페셔널 계정에 릴스를 올리는 데에만 씁니다.</p>
+  <ul>
+    <li>pages_show_list, pages_read_engagement, business_management: 이용자가 관리하는 페이지와 연결된 인스타그램 계정 찾기</li>
+    <li>pages_manage_posts: 페이스북 페이지에 릴스 올리기</li>
+    <li>instagram_basic, instagram_content_publish: 인스타그램 계정 확인과 릴스 올리기</li>
+  </ul>
+  <p>앱에 들어 있는 Facebook SDK의 자동 앱 이벤트 기록과 광고 식별자 수집은 꺼 두었습니다. 로그인 과정에서 Meta가 처리하는 정보는 <a href="https://www.facebook.com/privacy/policy/">Meta 개인정보처리방침</a>을 따릅니다.</p>
+  <p>iPhone에서는 Meta가 "앱이 추적하도록 허용"을 켜야 업로드 권한을 주기 때문에, 인스타그램·페이스북을 연결하기 전에 이를 묻습니다. 허용하지 않아도 유튜브와 틱톡은 그대로 쓸 수 있습니다.</p>
+
+  <h2>4. 광고와 결제</h2>
+  <h3>광고 (Google AdMob)</h3>
+  <p>광고 제거를 구독하지 않은 이용자는 업로드 전에 "광고 보고 업로드"를 눌러 Google AdMob의 보상형 광고를 봅니다. 광고를 제공하고 측정하기 위해 Google이 다음 정보를 수집하고 처리할 수 있습니다.</p>
+  <ul>
+    <li>기기 식별자: 광고 식별자(안드로이드 광고 ID, iPhone은 "추적 허용"을 선택한 경우 IDFA)와 이 앱에 한정된 식별자</li>
+    <li>IP 주소: 대략적인 지역을 추정하는 데 쓰일 수 있습니다.</li>
+    <li>광고 조회·클릭 같은 광고와의 상호작용, 앱 실행과 오류 같은 진단 정보</li>
+  </ul>
+  <p>Google과 그 광고 파트너는 기기에 광고 식별자나 쿠키와 비슷한 정보를 저장하거나 읽을 수 있습니다. 유럽 등 동의가 필요한 지역에서는 앱을 처음 열 때 광고 동의를 묻고, 광고 제거 탭의 "광고 개인정보 설정"에서 바꿀 수 있습니다. Google이 정보를 쓰는 방법은 <a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google 서비스를 사용하는 사이트나 앱에서 Google이 정보를 사용하는 방법</a>에서 확인할 수 있습니다. 광고 제거를 구독하면 광고가 나오지 않습니다.</p>
+  <h3>구독 결제 (Apple, Google, RevenueCat)</h3>
+  <p>광고 제거 구독은 App Store(Apple) 또는 Google Play(Google)에서 결제합니다. 운영자는 카드 번호 같은 결제 정보를 받지 않습니다. 구독이 유효한지는 RevenueCat이 스토어 영수증으로 확인하며, 이를 위해 RevenueCat이 무작위로 만든 앱 사용자 ID, 구매 내역, 기기와 앱 버전 정보를 처리합니다. 자세한 내용은 <a href="https://www.revenuecat.com/privacy">RevenueCat 개인정보처리방침</a>을 참고하세요.</p>
+
+  <h2>5. 제3자 제공과 처리 위탁</h2>
+  <p>이용자가 연결하고 업로드를 누른 플랫폼(Google, Meta)으로 영상과 게시 정보를 보내는 것, 그리고 4항의 광고·결제 처리 외에는 이용자의 정보를 제3자에게 제공하거나 처리를 맡기지 않습니다.</p>
+
+  <h2 id="delete">6. 보관과 삭제</h2>
+  <p>운영자는 서버가 없어 이용자의 개인정보를 보관하지 않습니다. 기기에 저장된 연결 정보는 다음 방법으로 지울 수 있습니다.</p>
+  <ul>
+    <li>앱의 연결 탭에서 "연결 해제": 해당 플랫폼의 연결 정보를 기기에서 지웁니다. 유튜브는 Google에 받은 권한도 함께 거둡니다.</li>
+    <li>앱 삭제: 기기에 저장된 앱 데이터가 함께 지워집니다.</li>
+    <li>Google 권한 거두기: <a href="https://security.google.com/settings/security/permissions">Google 계정 보안 설정</a>에서 multishort를 삭제합니다.</li>
+    <li>Meta 권한 거두기: Facebook의 설정 › 보안 및 로그인 › 비즈니스 통합(또는 앱 및 웹사이트)에서 multishort를 삭제합니다.</li>
+  </ul>
+  <p>이미 올라간 게시물은 각 플랫폼에 남으며, 유튜브·인스타그램·페이스북에서 직접 지울 수 있습니다. 운영자가 따로 지워야 할 데이터는 없지만, 삭제와 관련해 도움이 필요하면 아래 메일로 연락해 주세요.</p>
+
+  <h2>7. 아동</h2>
+  <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+
+  <h2>8. 문의</h2>
+  <p>개인정보에 관한 문의는 <a href="mailto:hayaeseong@gmail.com">hayaeseong@gmail.com</a>으로 보내 주세요.</p>
+
+  <h2>9. 방침의 변경</h2>
+  <p>이 방침이 바뀌면 이 페이지에 알리고 시행일을 고칩니다.</p>
+
+  <footer>
+    <a href="terms.html">이용약관</a> · <a href="support.html">지원</a>
+  </footer>
+</main>
+</body>
+</html>
